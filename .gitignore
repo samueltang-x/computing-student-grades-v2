@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio
+computing-student-grades-v2/.vs/
+computing-student-grades-v2/Debug/
