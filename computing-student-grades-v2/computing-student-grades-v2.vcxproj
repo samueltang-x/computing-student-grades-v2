@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="categories.cpp" />
     <ClCompile Include="computing-student-grades-v2.cpp" />
     <ClCompile Include="grade .cpp" />
     <ClCompile Include="median.cpp" />
@@ -158,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="grade.h" />
+    <ClInclude Include="categories.h" />
     <ClInclude Include="median.h" />
     <ClInclude Include="student_info.h" />
   </ItemGroup>
