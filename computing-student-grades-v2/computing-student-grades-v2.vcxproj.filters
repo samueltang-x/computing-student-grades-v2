@@ -24,10 +24,10 @@
     <ClCompile Include="student_info.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="grade .cpp">
+    <ClCompile Include="categories.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="categories.cpp">
+    <ClCompile Include="grade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
