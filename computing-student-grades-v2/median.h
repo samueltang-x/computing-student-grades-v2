@@ -4,5 +4,6 @@
 #include <vector>
 
 double median(std::vector<double>);
+double average(const std::vector<double>&);
 
 #endif
