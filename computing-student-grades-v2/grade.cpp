@@ -14,9 +14,11 @@ using std::string;
 using std::ostream;
 using std::endl;
 
+/*
 double grade(const Student_info& s) {
 	return grade(s.midterm, s.final, s.homework);
 }
+*/
 
 double grade(double midterm, double final, const std::vector<double>& hw) {
 	if (hw.size() == 0)
@@ -27,6 +29,7 @@ double grade(double midterm, double final, double hw) {
 	return 0.2 * midterm + 0.4 * final + 0.4 * hw;
 }
 
+/*
 double grade_aux(const Student_info& s) {
 	try {
 		return grade(s);
@@ -39,3 +42,4 @@ double grade_aux(const Student_info& s) {
 bool did_all_hw(const Student_info& s) {
 	return find(s.homework.begin(), s.homework.end(), 0) == s.homework.end();
 }
+*/

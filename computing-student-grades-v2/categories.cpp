@@ -5,7 +5,7 @@
 using std::list;
 
 bool fgrade(const Student_info& s) {
-	return grade(s) < 60;
+	return s.grade() < 60;
 }
 
 list<Student_info> extract_fails(list<Student_info>& students) {

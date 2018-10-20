@@ -5,11 +5,20 @@
 #include <string>
 #include <vector>
 
-struct Student_info
+class Student_info
 {
-	std::string name;
+private:
+	std::string n;
 	double midterm, final;
 	std::vector<double> homework;
+
+public:
+	Student_info();
+	Student_info(std::istream&);
+	std::istream& read(std::istream&);
+	double grade() const;
+	std::string name() const { return n; }
+	bool valid() const { return !homework.empty(); }
 };
 
 std::istream& read(std::istream&, Student_info&);
