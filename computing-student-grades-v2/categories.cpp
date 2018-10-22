@@ -4,14 +4,14 @@
 
 using std::list;
 
-bool fgrade(const Student_info& s) {
+bool fgrade(const Core& s) {
 	return s.grade() < 60;
 }
 
-list<Student_info> extract_fails(list<Student_info>& students) {
-	list<Student_info> fail, pass;
+list<Core> extract_fails(list<Core>& students) {
+	list<Core> fail, pass;
 
-	list<Student_info>::iterator iter = students.begin();
+	list<Core>::iterator iter = students.begin();
 	while (iter != students.end()) {
 		if (fgrade(*iter)) {
 			fail.push_back(*iter);
