@@ -6,6 +6,8 @@
 #include <vector>
 
 class Core {
+	template<typename T>
+	friend class Handle;
 	friend class Student_info;
 protected:
 	virtual Core* clone() const { return new Core(*this); }
@@ -72,12 +74,12 @@ private:
 
 template <class T> class Handle {
 public:
-	Handle() : p(0) {}    // default constructor
-	Handle(T* t) : p(t) {}
+	Handle(): p(0) {}    // default constructor
+	Handle(T* t): p(t) {}
 	~Handle() { delete p; }    // desctructor
 
 	// copy constructor
-	Handle(const Handle& s) : p(0) { if (s.p) p = s.p->clone(); }
+	Handle(const Handle& s): p(0) { if (s.p) p = s.p->clone(); }
 
 	// asignment operator
 	Handle& operator=(const Handle&);
@@ -90,28 +92,30 @@ private:
 	T* p;
 };
 
-template<class T>
+template <class T>
 Handle<T>& Handle<T>::operator=(const Handle& rhs) {
 	if (&rhs != this) {
-		delept p;
+		delete p;
 		p = rhs.p ? rhs.p->clone() : 0;
 	}
 
 	return *this;
 }
 
-template<class T>
+template <class T>
 T& Handle<T>::operator*() const {
 	if (p)
 		return *p;
 	throw std::runtime_error("unbound Handle");
 }
 
-template<class T>
+template <class T>
 T* Handle<T>::operator->() const {
 	if (p)
 		return p;
 	throw std::runtime_error("unbound Handle");
 }
+
+bool compare_Core_handles(const Handle<Core>&, const Handle<Core>&);
 
 #endif

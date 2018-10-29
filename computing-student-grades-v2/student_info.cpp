@@ -86,3 +86,7 @@ Student_info& Student_info::operator=(const Student_info& s) {
 	}
 	return *this;
 }
+
+bool compare_Core_handles(const Handle<Core>& c1, const Handle<Core>& c2) {
+	return compare(*c1, *c2);
+}
